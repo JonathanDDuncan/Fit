@@ -8,13 +8,15 @@ namespace Fit
 {
 	public class Calculate
 	{
-		public static (int width1, int height1) GetSize(int width1, int height1, int width2, int height2)
+		public static (double width1, double height1) GetSize(double width1, double height1, double width2, double height2)
 		{
-			
-			width2 = width1;
-			height2 = height1;
+			var widthAspect = width1 / width2;
+			var heightAspect = height1 / height2;
 
-			return (width2, height2);
+			var width3 = width2 * heightAspect;
+			var height3 = height2 * heightAspect;
+
+            return (width3, height3);
 		}
 	}
 }
