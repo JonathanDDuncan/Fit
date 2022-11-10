@@ -10,7 +10,11 @@ namespace Fit
 	{
 		public static (int width1, int height1) GetSize(int width1, int height1, int width2, int height2)
 		{
-			return (width1, height1);
+			
+			width2 = width1;
+			height2 = height1;
+
+			return (width2, height2);
 		}
 	}
 }
