@@ -63,5 +63,27 @@ namespace Fit_Test
             Assert.AreEqual(aspect, width3 / height3);
 
         }
+
+        [TestMethod]
+        public void TestMethod9()
+        {
+            double width2 = 5;
+            double height2 = 2;
+            var aspect = width2 / height2;
+            var (width3, height3) = Fit.Calculate.GetSize(10, 10, width2, height2);
+            Assert.AreEqual(4, height3);
+
+        }
+
+        [TestMethod]
+        public void TestMethod10()
+        {
+            double width2 = 2;
+            double height2 = 5;
+            var aspect = width2 / height2;
+            var (width3, height3) = Fit.Calculate.GetSize(10, 10, width2, height2);
+            Assert.AreEqual(4, width3);
+
+        }
     }
 }
